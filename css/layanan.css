@@ -1,0 +1,140 @@
+/* ======================================= */
+/* Layanan Specific Styles                 */
+/* ======================================= */
+
+.services-detail-section {
+    padding: 60px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-detail-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 60px;
+    font-size: 2.8em;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-card.katering {
+    /* Balik urutan untuk katering agar layout lebih dinamis */
+    flex-direction: row-reverse;
+}
+
+.card-image {
+    flex: 0 0 300px; /* Lebar tetap untuk gambar */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.card-image:hover img {
+    transform: scale(1.03);
+}
+
+.card-text-box {
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-text-box h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-text-box p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #a00000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 0, 0, 0.4);
+}
+
+/* Responsiveness for Layanan Page */
+@media (max-width: 768px) {
+    .services-detail-section {
+        padding: 40px 10px;
+    }
+
+    .services-detail-section h1 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .service-card,
+    .service-card.katering {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    
+    .card-image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card-image img {
+        margin: 0 auto;
+    }
+
+    .card-text-box {
+        min-width: 100%;
+    }
+
+    .card-text-box h2 {
+        font-size: 1.6em;
+    }
+
+    .btn-primary {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 15px auto 0;
+        text-align: center;
+    }
+}

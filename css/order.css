@@ -1,0 +1,82 @@
+/* GAYA KHUSUS HALAMAN ORDER HISTORY */
+
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.order-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.date-picker {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.date-picker i {
+    margin-right: 10px;
+    color: #c90000;
+}
+
+/* Tampilan Tabel */
+.order-table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead th {
+    background-color: #f7f3e8;
+    color: var(--text-dark);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Icon Status */
+.status-done {
+    color: #28a745; 
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.status-cancel {
+    color: #dc3545; 
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+}

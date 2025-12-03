@@ -1,0 +1,154 @@
+/* GAYA KHUSUS HALAMAN MANAJEMEN PRODUK */
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: rgb(228, 37, 37); 
+}
+
+.btn-tambah {
+    background-color: black;
+}
+
+
+
+/* Tampilan Tabel Produk */
+.product-table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead th {
+    background-color: #f7f3e8; 
+    color: #333;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+.action-icons i {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    color: #007bff; 
+}
+
+.delete-icon {
+    color: #dc3545; 
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+}
+
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 600px; 
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* --- CSS untuk Top-Bar & Notifikasi (Komponen Bersama) --- */
+
+/* 1. Mengatur tata letak Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    height: 60px; 
+}
+
+/* 2. Menata Ikon Kanan (Search dan Notifikasi) */
+.top-icons {
+    display: flex;
+    gap: 20px; 
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+/* 3. Gaya Link Notifikasi */
+.notif-icon-link {
+    position: relative; 
+    color: #555; 
+    text-decoration: none;
+    display: inline-block; 
+}
+
+/* 4. Gaya Badge Notifikasi (Lingkaran Merah) */
+.top-notif-badge {
+    position: absolute;
+    top: -8px; 
+    right: -8px; 
+    background-color: #dc3545; /* Merah */
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%; 
+    font-size: 0.7rem;
+    font-weight: bold;
+    line-height: 1; 
+}
+
+/* 5. Pastikan ikon search memiliki cursor pointer */
+.top-icons .fa-search {
+    cursor: pointer;
+}

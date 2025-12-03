@@ -1,0 +1,184 @@
+/* ======================================= */
+/* 1. Global Variables & Base Styles       */
+/* ======================================= */
+:root {
+    --primary-color: #c90000; /* Merah Dapur Azizah */
+    --secondary-color: #343a40; /* Hitam/Abu Tua */
+    --background-light: #f8f8f8;
+    --font-family: 'Arial', sans-serif;
+    --gap-spacing: 20px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    color: #333;
+}
+
+.website-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ======================================= */
+/* 2. Header & Navigation (DIAPLIKASIKAN KE SEMUA FILE) */
+/* ======================================= */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-spacing);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 8px 10px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-login:hover {
+    background-color: #a00000; 
+    color: white !important;
+}
+
+/* ======================================= */
+/* 3. Footer (DIAPLIKASIKAN KE SEMUA FILE) */
+/* ======================================= */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px; /* Tambahkan margin agar tidak terlalu mepet dengan konten atas */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-box, .footer-info, .footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo-box img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-info h3, .footer-contact h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-info p, .footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.btn-contact {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #a00000;
+}
+
+/* ======================================= */
+/* 4. Responsiveness                       */
+/* ======================================= */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn-login {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo-box, .footer-info, .footer-contact {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* CATATAN: Style untuk Hero/Menu Overview (hanya di index.php) ada di kode CSS Anda sebelumnya. */
+/* ======================================= */
+/* Cart Icon in Navbar                     */
+/* ======================================= */
+
+.main-nav .cart-icon {
+    font-size: 1.3em; /* Ukuran ikon lebih besar dari teks biasa */
+    padding: 5px 10px;
+    color: var(--secondary-color);
+}
+
+.main-nav .cart-icon:hover {
+    color: var(--primary-color);
+    /* Hapus font-weight: bold; agar ikon tidak bergeser */
+    font-weight: normal; 
+}

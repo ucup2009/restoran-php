@@ -1,0 +1,21 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "xprotocol",
+        "enableSsl": "Disabled"
+      },
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "MySQL Local",
+      "database": "db_restoran",
+      "username": "root",
+      "password": "200309",
+      "connectionTimeout": 50
+    }
+  ],
+  "liveServer.settings.port": 5501
+}

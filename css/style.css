@@ -1,0 +1,698 @@
+/* GAYA DASAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f3e8; 
+}
+
+.website-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* HEADER DAN NAVIGASI */
+/* --- Modifikasi HEADER & NAVIGASI untuk Gaya Merah Penuh --- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Kurangi padding vertikal sedikit */
+    
+    /* GANTI: Background Merah Penuh */
+    background-color: #c90000; 
+    /* Hapus border-bottom yang mungkin ada */
+    border-bottom: none; 
+}
+
+.logo img {
+    height: 40px; 
+    /* Hapus jika logo Anda sudah berwarna putih, jika tidak, Anda mungkin perlu logo versi putih/terang */
+    /* filter: brightness(2); */ 
+}
+
+/* Teks Navigasi Default (Semua link) */
+.main-nav a {
+    text-decoration: none;
+    color: white; /* Ganti warna teks menjadi putih */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px; /* Tambahkan padding untuk area klik */
+    border-radius: 4px; /* Sudut sedikit melengkung */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover State */
+.main-nav a:hover:not(.btn-login):not(.active) {
+    background-color: rgba(255, 255, 255, 0.1); /* Background transparan tipis saat hover */
+}
+
+/* Style untuk Item Navigasi yang SEDANG AKTIF (Contoh: Menu Dine-In) */
+.main-nav a.active {
+    background-color: #a00000; /* Background merah lebih gelap */
+    color: white;
+    font-weight: bold;
+    /* Hapus style underline atau border bottom sebelumnya */
+    border-bottom: none;
+}
+
+/* Style untuk Tombol Login/User */
+.main-nav .btn-login {
+    /* Ganti style btn-login yang ada di style.css */
+    background-color: #333; /* Background gelap, ganti jika Anda mau warna lain */
+    color: white !important; 
+    padding: 8px 18px !important;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.main-nav .btn-login:hover {
+    background-color: #555;
+}
+
+/* Jika Anda memiliki ikon keranjang di luar nav, pastikan ikon tersebut terlihat */
+.cart-icon {
+    /* Atur ulang posisi dan warna agar terlihat di background merah */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white; /* Ikon keranjang harus berwarna putih */
+}
+
+.cart-icon i {
+    color: white;
+}
+
+/* BAGIAN LAYANAN (SERVICES HERO) */
+.services-hero {
+    display: flex;
+    padding: 60px 50px;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    margin: 30px auto;
+    max-width: 1400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.service-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.service-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 550px;
+    color: #444;
+    font-weight: 400;
+}
+
+.service-images {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.service-images img {
+    width: 45%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-images img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* BAGIAN OVERVIEW MENU */
+.menu-overview {
+    padding: 60px 50px;
+    background: linear-gradient(135deg, #f7f3e8 0%, #ffffff 100%);
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin: 30px auto;
+    max-width: 1400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.menu-text-box {
+    flex: 1;
+    padding: 20px;
+}
+
+.menu-text-box h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    max-width: 500px;
+    color: #c90000;
+    line-height: 1.2;
+}
+
+.menu-text-box p {
+    line-height: 1.8;
+    max-width: 580px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.menu-image-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 18px;
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.large-item {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; 
+}
+
+.small-item {
+    height: 220px;
+}
+
+/* Responsive improvements for Home page */
+@media (max-width: 1024px) {
+    .services-hero {
+        padding: 50px 30px;
+        gap: 40px;
+    }
+
+    .menu-overview {
+        padding: 50px 30px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .service-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .service-content p {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .service-images {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-images img {
+        width: 48%;
+        height: 200px;
+    }
+
+    .menu-overview {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .menu-text-box {
+        text-align: center;
+    }
+
+    .menu-text-box h1 {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .menu-text-box p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .menu-image-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .large-item {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .small-item {
+        height: 200px;
+    }
+}
+
+
+/* FOOTER */
+/* --- FOOTER UNTUK LAYANAN & GLOBAL --- */
+
+.main-footer {
+    /* Background sesuai dengan gambar (hitam/dark grey) */
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 50px 30px; /* Pertahankan padding vertikal yang bagus */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Jarak antara kolom */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo-box {
+    /* Sesuaikan lebar logo agar tidak terlalu besar */
+    flex-basis: auto; 
+    padding-right: 50px; /* Beri jarak ke kanan dari logo */
+}
+
+.footer-logo-box img {
+    height: 120px; /* Ukuran logo seperti di gambar */
+    background-color: white; /* Jika logo Anda perlu background putih */
+    padding: 10px;
+}
+
+.footer-info, .footer-contact {
+    margin: 15px;
+    /* Pastikan info dan kontak tidak terlalu sempit */
+    min-width: 250px; 
+}
+
+.footer-info h3, .footer-contact h3 {
+    /* Hapus border/underline jika ada */
+    border-bottom: none; 
+    color: white;
+    margin-top: 0; 
+    margin-bottom: 20px; /* Jarak yang lebih jelas dari konten di bawahnya */
+    font-size: 1.2em;
+}
+
+.footer-contact .btn-contact {
+    /* Ganti warna tombol Hubungi Kami (sesuai gambar: coklat muda) */
+    background-color: #bfa17c; 
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.footer-contact .btn-contact:hover {
+    background-color: #d1b490;
+}
+/* OVERLAY (Latas belakang gelap transparan) */
+.login-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+/* KONTEN MODAL */
+.login-modal-content {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.modal-header img {
+    height: 35px; 
+}
+
+/* TOMBOL PILIHAN ROLE */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btn-role {
+    flex-grow: 1; 
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+/* GAYA KHUSUS TOMBOL */
+.btn-admin, .btn-customer {
+    background-color: #ff3b30; 
+}
+
+.btn-role:hover {
+    background-color: #e63228;
+
+}
+/* ======================================= */
+/* Global Variables            */
+/* ======================================= */
+:root {
+    --primary-color: #c90000; /* Merah Dapur Azizah */
+    /* --secondary-color: #343a40; Hitam/Abu Tua */
+    --background-light: #f8f8f8;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* ======================================= */
+/* General Reset & Layout      */
+/* ======================================= */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Hapus background-light jika ingin latar putih bersih */
+}
+
+.website-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ======================================= */
+/* Header                  */
+/* ======================================= */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo img {
+    height: 50px; /* Sesuaikan ukuran logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antar item menu */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 8px 10px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-color);
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: white !important; /* Timpa warna hover */
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #a00000; /* Merah lebih gelap saat hover */
+    color: white !important;
+}
+
+/* ======================================= */
+/* Services Hero Section        */
+/* ======================================= */
+.services-hero {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif */
+    gap: 30px;
+    padding: 50px 0;
+    align-items: center;
+}
+
+.service-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.service-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.service-images {
+    flex: 2;
+    display: flex;
+    gap: 10px;
+}
+
+.service-images img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================================= */
+/* Menu Overview              */
+/* ======================================= */
+.menu-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 0;
+    background-color: var(--background-light);
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+
+.menu-text-box {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.menu-text-box h1 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* .menu-text-box p {
+    color: #666;
+    line-height: 1.7;
+} */
+
+.menu-image-grid {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px; /* Atur tinggi baris */
+    gap: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.large-item {
+    grid-column: 1 / 3; /* Membentang di dua kolom */
+    grid-row: 1 / 3; /* Membentang di dua baris */
+}
+
+/* ======================================= */
+/* Footer                 */
+/* ======================================= */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-box, .footer-info, .footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo-box img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-info h3, .footer-contact h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-info p, .footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.btn-contact {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #a00000;
+}
+
+/* ======================================= */
+/* Responsiveness            */
+/* ======================================= */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn-login {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .services-hero, .menu-overview {
+        flex-direction: column;
+    }
+    
+    .service-images {
+        flex-direction: column;
+    }
+
+    .service-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 150px 150px;
+    }
+
+    .large-item {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo-box, .footer-info, .footer-contact {
+        min-width: 100%;
+    }
+}

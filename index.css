@@ -1,0 +1,110 @@
+/*
+  Attractive style (style.css)
+  - Modern, responsive CSS for landing/portfolio/wedding-invitation pages
+  - Usage: include this CSS in your project (link rel="stylesheet" href="style.css")
+  - Contains variables, utility classes, navbar, hero, cards, gallery, forms, footer, and animations
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap');
+
+:root{
+  --bg-1: linear-gradient(135deg,#0f172a 0%, #0b1220 50%, #071028 100%);
+  --glass: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.65);
+  --accent: #7c5cff;
+  --accent-2: #ff7ab6;
+  --card-radius: 18px;
+  --gap: 1.25rem;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg-1);
+  color: #e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{width:min(1100px,94%);margin:0 auto;padding:3rem 0}
+
+/* ---------- Utilities ---------- */
+.flex{display:flex}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.center{display:flex;align-items:center;justify-content:center}
+.mt-1{margin-top:0.5rem}
+.mt-2{margin-top:1rem}
+.text-muted{color:var(--muted)}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:12px;border:0;cursor:pointer;font-weight:600;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 6px 20px rgba(124,92,255,0.18);transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* ---------- Navbar ---------- */
+.navbar{position:sticky;top:16px;z-index:40;padding:10px 0}
+.navbar-inner{backdrop-filter:blur(8px);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px;padding:.5rem .75rem;display:flex;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+.brand .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-family:'Playfair Display';font-weight:700}
+.nav-links{display:flex;gap:1rem;margin-left:auto}
+.nav-links a{color:var(--muted);text-decoration:none;padding:.45rem .6rem;border-radius:10px;transition:background .15s ease,color .15s ease}
+.nav-links a:hover{background:rgba(255,255,255,0.03);color:white}
+
+/* ---------- Hero ---------- */
+.hero{padding:4rem 0 6rem}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:var(--card-radius);padding:2.25rem;display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;box-shadow:0 10px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.hero-title{font-family:'Playfair Display', serif;font-size:2.1rem;margin:0 0 .4rem}
+.hero-sub{color:var(--muted);margin:0 0 1.2rem}
+.hero-cta{display:flex;gap:.75rem}
+.hero-illustration{border-radius:14px;overflow:hidden;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem}
+.hero-illustration img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---------- Cards / Features ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.card{background:var(--glass);padding:1.2rem;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(3,6,23,0.5)}
+.card h4{margin:0 0 .5rem}
+.card p{margin:0;color:var(--muted)}
+
+/* ---------- Gallery (lightbox-ready) ---------- */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem}
+.gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .2s ease, box-shadow .2s}
+.gallery img:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.6)}
+
+/* ---------- Form ---------- */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.input,textarea{width:100%;padding:.7rem .85rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+textarea{min-height:120px;resize:vertical}
+
+/* ---------- Footer ---------- */
+.footer{padding:2rem 0;margin-top:3rem;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+/* ---------- Glass effect accent element (for overlays/cards) ---------- */
+.glass-pill{background:linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));padding:.5rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,0.03)}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero-card{grid-template-columns:1fr;}
+  .hero-illustration{order:-1}
+  .nav-links{display:none}
+  .container{padding:2rem 0}
+}
+
+/* ---------- Micro-animations ---------- */
+@keyframes floaty {10%{transform:translateY(-6px)}50%{transform:translateY(-2px)}}
+.floaty{animation:floaty 6s ease-in-out infinite}
+
+/* ---------- Small helpers ---------- */
+.kicker{display:inline-block;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:.25rem .6rem;border-radius:999px;font-size:.85rem}
+.huge{font-size:clamp(1.4rem,4vw,2.6rem);font-family:'Playfair Display'}
+
+/* ---------- Example component: RSVP card ---------- */
+.rsvp{display:flex;flex-direction:column;gap:.6rem}
+.rsvp .name{font-weight:700}
+.rsvp .meta{color:var(--muted);font-size:.95rem}
+
+/* End of file */
